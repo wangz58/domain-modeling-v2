@@ -12,6 +12,7 @@
 		18AC713C1CC312ED008EFD0F /* CustomStringConvertibleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AC71321CC2FFF3008EFD0F /* CustomStringConvertibleTest.swift */; };
 		18AC713D1CC312F1008EFD0F /* MathematicsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AC71341CC3000E008EFD0F /* MathematicsTest.swift */; };
 		18AC713E1CC312F4008EFD0F /* ExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AC71361CC30027008EFD0F /* ExtensionTest.swift */; };
+		18E7BC9F1CC6F869000299E0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AC711F1CC2CE29008EFD0F /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +28,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		189ACAFA1CC43AB40013AA7C /* xxx.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = xxx.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18AC711C1CC2CE29008EFD0F /* domain-modeling-v2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "domain-modeling-v2"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18AC711F1CC2CE29008EFD0F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		18AC712A1CC2FFB5008EFD0F /* domain-modeling-v2tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "domain-modeling-v2tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +40,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		189ACAF71CC43AB40013AA7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		18AC71191CC2CE28008EFD0F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -69,6 +78,7 @@
 			children = (
 				18AC711C1CC2CE29008EFD0F /* domain-modeling-v2 */,
 				18AC712A1CC2FFB5008EFD0F /* domain-modeling-v2tests.xctest */,
+				189ACAFA1CC43AB40013AA7C /* xxx.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,6 +106,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		189ACAF91CC43AB40013AA7C /* xxx */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 189ACB011CC43AB40013AA7C /* Build configuration list for PBXNativeTarget "xxx" */;
+			buildPhases = (
+				189ACAF61CC43AB40013AA7C /* Sources */,
+				189ACAF71CC43AB40013AA7C /* Frameworks */,
+				189ACAF81CC43AB40013AA7C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = xxx;
+			productName = xxx;
+			productReference = 189ACAFA1CC43AB40013AA7C /* xxx.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		18AC711B1CC2CE28008EFD0F /* domain-modeling-v2 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18AC71231CC2CE29008EFD0F /* Build configuration list for PBXNativeTarget "domain-modeling-v2" */;
@@ -140,6 +167,9 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = apple;
 				TargetAttributes = {
+					189ACAF91CC43AB40013AA7C = {
+						CreatedOnToolsVersion = 7.3;
+					};
 					18AC711B1CC2CE28008EFD0F = {
 						CreatedOnToolsVersion = 7.3;
 					};
@@ -162,11 +192,19 @@
 			targets = (
 				18AC711B1CC2CE28008EFD0F /* domain-modeling-v2 */,
 				18AC71291CC2FFB5008EFD0F /* domain-modeling-v2tests */,
+				189ACAF91CC43AB40013AA7C /* xxx */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		189ACAF81CC43AB40013AA7C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		18AC71281CC2FFB5008EFD0F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -177,6 +215,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		189ACAF61CC43AB40013AA7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		18AC71181CC2CE28008EFD0F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -190,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18AC713D1CC312F1008EFD0F /* MathematicsTest.swift in Sources */,
+				18E7BC9F1CC6F869000299E0 /* main.swift in Sources */,
 				18AC712D1CC2FFB5008EFD0F /* domain_modeling_v2tests.swift in Sources */,
 				18AC713C1CC312ED008EFD0F /* CustomStringConvertibleTest.swift in Sources */,
 				18AC713E1CC312F4008EFD0F /* ExtensionTest.swift in Sources */,
@@ -199,6 +245,28 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		189ACAFF1CC43AB40013AA7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = xxx/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uw.xxx;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		189ACB001CC43AB40013AA7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = xxx/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uw.xxx;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		18AC71211CC2CE29008EFD0F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -284,6 +352,7 @@
 		18AC71241CC2CE29008EFD0F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -291,6 +360,7 @@
 		18AC71251CC2CE29008EFD0F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -320,6 +390,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		189ACB011CC43AB40013AA7C /* Build configuration list for PBXNativeTarget "xxx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				189ACAFF1CC43AB40013AA7C /* Debug */,
+				189ACB001CC43AB40013AA7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		18AC71171CC2CE28008EFD0F /* Build configuration list for PBXProject "domain-modeling-v2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

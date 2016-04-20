@@ -10,12 +10,13 @@ import XCTest
 
 import domain_modeling_v2
 
+
 class ExtensionTest: XCTestCase {
     
     let numD: Double = 3.12;
     
     func testDoubleToMoney() {
-        var numMoney = numD.USD;
+        var numMoney : Money = numD.USD;
         XCTAssert(numMoney.amount == 3)
         XCTAssert(numMoney.currency == "USD")
         numMoney = numD.EUR;

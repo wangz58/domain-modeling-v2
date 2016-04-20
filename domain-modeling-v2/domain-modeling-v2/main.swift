@@ -20,24 +20,19 @@ public class TestMe {
     }
 }
 
-protocol CustomStringConvertible {
-    init() {}
+public protocol CustomStringConvertible {
     var description: String { get };
 }
 
-protocol Mathematics {
-    init() {}
+public protocol Mathematics {
     func add(to: Money) -> Money;
     func subtract(from: Money) -> Money;
 }
 
-
-
-
 /////////////////////////////////////
 // Money
 //
-public struct Money: CustomStringConvertible, Mathematics { // open1
+public struct Money : CustomStringConvertible, Mathematics { // open1
     public var amount : Int
     public var currency : String
     
@@ -46,9 +41,7 @@ public struct Money: CustomStringConvertible, Mathematics { // open1
         self.currency = currency;
     }
     
-    public var description: String { // open2
-        return "\(currency)\(Double(amount))";
-    } // close2
+
     
     public func convert(to: String) -> Money { // open3
         //    1 USD = .5 GBP (2 USD = 1 GBP) 1 USD = 1.5 EUR (2 USD = 3 EUR) 1 USD = 1.25 CAN (4 USD = 5 CAN)
@@ -100,6 +93,10 @@ public struct Money: CustomStringConvertible, Mathematics { // open1
         result.amount = from.amount - result.amount;
         return result;
     }
+    
+    public var description: String { // open2
+        return "\(currency)\(Double(amount))";
+    } // close2
 } // close1
 
 ////////////////////////////////////
@@ -158,13 +155,14 @@ public class Person: CustomStringConvertible {
     public var age : Int = 0
     private var _job : Job? = nil;
     private var _spouse : Person? = nil;
+    
     public var description: String {
         var desc = "\(firstName) \(lastName) \(age)";
         if (self.job != nil) {
-            desc += "job: \(job!.description)"
+            desc += " job: \(job!.description)"
         }
         if (self.spouse != nil) {
-            desc += "spouse: \(spouse!.firstName) \(spouse!.lastName)"
+            desc += " spouse: \(spouse!.firstName) \(spouse!.lastName)"
         }
         return desc;
     }
@@ -216,7 +214,7 @@ public class Family: CustomStringConvertible {
     public var description: String {
         var desc = "";
         for person in self.members {
-            desc += person.description + ";";
+            desc += person.description + "; ";
         }
         return desc;
     }
@@ -257,7 +255,7 @@ public class Family: CustomStringConvertible {
     }
 }
 
-extension Double {
+public extension Double {
     var USD: Money { return Money(amount: Int(self), currency: "USD")}
     var EUR: Money { return Money(amount: Int(self / 3 * 2), currency: "USD")}
     var GBP: Money { return Money(amount: Int(self * 2), currency: "USD")}

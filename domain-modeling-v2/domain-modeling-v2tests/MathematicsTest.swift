@@ -26,20 +26,24 @@ class MathematicsTest: XCTestCase {
     
     func testAddUSDtoCAN() {
         let total = threeUSD.add(tenCAN)
-        XCTAssert(total.amount == 14)
+        print("\(total.amount)");
+        XCTAssert(total.amount == 13)
         XCTAssert(total.currency == "CAN")
     }
     
     func testSubtractEURfromEUR() {
-        let total = fiveEUR.subtract(threeEUR)
+        let total = threeEUR.subtract(fiveEUR)
+        print("\(total.amount)");
         XCTAssert(total.amount == 2)
         XCTAssert(total.currency == "EUR")
     }
     
     func testSubtractUSDfromCAN() {
         let total = threeUSD.subtract(tenCAN)
-        XCTAssert(total.amount == 6)
+        print("\(total.amount)");
+        XCTAssert(total.amount == 7)
         XCTAssert(total.currency == "CAN")
     }
 
 }
+

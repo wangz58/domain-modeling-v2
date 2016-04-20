@@ -16,22 +16,13 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "18AC71291CC2FFB5008EFD0F"
-               BuildableName = "domain-modeling-v2tests.xctest"
-               BlueprintName = "domain-modeling-v2tests"
+               BlueprintIdentifier = "189ACAF91CC43AB40013AA7C"
+               BuildableName = "xxx.xctest"
+               BlueprintName = "xxx"
                ReferencedContainer = "container:domain-modeling-v2.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "18AC711B1CC2CE28008EFD0F"
-            BuildableName = "domain-modeling-v2"
-            BlueprintName = "domain-modeling-v2"
-            ReferencedContainer = "container:domain-modeling-v2.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>

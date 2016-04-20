@@ -23,27 +23,32 @@ class CustomStringConvertibleTest: XCTestCase {
     
     func testJobDescription() {
         let jobprint = supermanHourly.description;
-        XCTAssert(jobprint == "Superman: 10h.0 per hour");
+        XCTAssert(jobprint == "Superman: 10.0 per hour");
     }
     
     func testPersonDescription() {
         var personprint = nickJackson.description;
+        print(personprint);
         XCTAssert(personprint == "Nick Jackson 21");
         nickJackson.job = supermanHourly;
         personprint = nickJackson.description;
+        print("\(personprint)");
         XCTAssert(personprint == "Nick Jackson 21 job: Superman: 10.0 per hour");
         nickJackson.spouse = cathyJackson;
         personprint = nickJackson.description;
+        print("\(personprint)");
         XCTAssert(personprint == "Nick Jackson 21 job: Superman: 10.0 per hour spouse: Cathy Jackson");
     }
     
     func testFamilyDescription() {
-        var family = Family(spouse1: nickJackson, spouse2: cathyJackson);
+        let family = Family(spouse1: nickJackson, spouse2: cathyJackson);
         var familyprint = family.description
-        XCTAssert(familyprint == "Nick Jackson 21 job: Superman: 10.0 per hour spouse: Cathy Jackson; Cathy Jackson spouse: Nick Jackson");
-        var child = family.haveChild(Person(firstName: "Peter", lastName: "Jackson", age: 2));
+        print("\(familyprint)");
+        XCTAssert(familyprint == "Nick Jackson 21 spouse: Cathy Jackson; Cathy Jackson 20 spouse: Nick Jackson; ");
+        _ = family.haveChild(Person(firstName: "Peter", lastName: "Jackson", age: 2));
         familyprint = family.description;
-        XCTAssert(familyprint == "Nick Jackson 21 job: Superman: 10.0 per hour spouse: Cathy Jackson; Cathy Jackson spouse: Nick Jackson; Peter Jackson 2");
+        print("\(familyprint)");
+        XCTAssert(familyprint == "Nick Jackson 21 spouse: Cathy Jackson; Cathy Jackson 20 spouse: Nick Jackson; Peter Jackson 2; ");
     }
 
 }
